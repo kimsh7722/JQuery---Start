@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        function func() {
+            // 함수를 연속으로 부르는 것 - 체이닝(chaining)
+            $("#my-h1,#my-h2").css("backgroundColor","blue")
+            // ,콤마로 구분해서 여러개 요소 접근 가능하다.
+        }
+    </script>
+</head>
+<body>
+    <h1 id="my-h1">제목1</h1>
+    <h1 id="my-h2">제목2</h1>
+    <button onclick="func()">실행</button>
+</body>
+</html>

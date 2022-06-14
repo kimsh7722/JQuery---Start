@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./js/jquery.min.js" type="text/css"> -->
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        #wrap {
+            width: 200px; height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function myFunc() {
+            // 예시 document.getElementById("wrap").style.backgroundColor="red"
+            $("#wrap").css("backgroundColor","red")
+            // $ - 선택자(selector) - HTML 요소를 선택하여 가져온다.
+            // 선택자로 선택할떄 아이디면 #, 크래스면 .
+            // css메서드로 style 조정
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        wrap
+    </div>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>
