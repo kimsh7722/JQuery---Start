@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+
+        var myValue=''
+        function myInput() {
+            // myValue = $("#my-input").val()
+            /*
+                예시 - document.getElementById().value
+                val() - 값을 리턴
+                val('???') - 값을 번경
+            */
+            // alert(myValue)
+            $("#my-input").val('최부장')
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="김대리" id="my-input">
+    <button onclick="myInput()">클릭</button>
+</body>
+</html>

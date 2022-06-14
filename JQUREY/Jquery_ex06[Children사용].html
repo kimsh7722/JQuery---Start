@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=evenedge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        #menu {
+            color : white;
+            background-color: brown;
+        }
+    </style>
+    <script>
+        var myLi=null;
+        var myMenu=null;
+        function myFunc() {
+            myMenu=document.getElementById("menu");
+
+            // myMenu의 자식요소 모두 자식(children)에 집어 넣어라
+            myLi=myMenu.children;
+            for(var i=0; i<myLi.length; i++) {
+                if(i%2==0) {
+                    myLi[i].style.border="3px solid yellow"
+                    myLi[i].style.backgroundColor="red"
+                }else if(i%2!=0) {
+                    myLi[i].style.border="3px solid blue"
+                    myLi[i].style.backgroundColor="green"
+                }
+            }
+        }
+        // $(document).ready(function(){
+
+        // })
+    </script>
+</head>
+<body>
+    <ul id="menu">
+        <li id="li1">리스트1-index:0</li>
+        <li>리스트2-index:1</li>
+        <li id="li3">리스트3-index:2</li>
+        <li>리스트4-index:3</li>
+        <li id="li5">리스트5-index:4</li>
+        <li>리스트6-index:5</li>
+        <li id="li7">리스트7-index:6</li>
+        <li>리스트8-index:7</li>
+        <li id="li9">리스트9-index:8</li>
+    </ul>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

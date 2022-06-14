@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function(){
+            // HTML이 다완성도면 익명함수가 자동으로 호출된다.
+            $("#li2").parent().css({
+                // parent : 부모
+                // 먼말이냐면 id : li2인 자식을 가진 부모요소란 뜻이다
+                "border":"2px dashed blue",
+                // dashed이게 먼가햇는 대 파선입니다
+                "backgroundColor":"red"
+            })
+            $("#li2").prev().css({
+                // prev : 이전위치
+                "border":"2px dashed blue",
+                // dashed이게 먼가햇는 대 파선입니다
+                "backgroundColor":"green"
+            })
+            $("#li2").next().css({
+                // next : 다음
+                "border":"2px dashed blue",
+                // dashed이게 먼가햇는 대 파선입니다
+                "backgroundColor":"yellow"
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul><!-- li2의 부모함수 -->
+        <li>리스트1</li> <!-- prev -->
+        <li id="li2">리스트2</li>
+        <li>리스트3</li> <!-- next -->
+    </ul>
+</body>
+</html>

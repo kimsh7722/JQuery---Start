@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./js/jquery.min.js" type="text/css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        // function myFunc() {
+        //     // 해당 선택자를 움직임을 멈춰라
+        //     $(".?").stop().animate()
+        // }
+        document.getElementById("my-h1").style.color='red';
+        /* Uncaught TypeError TypeError: Cannot read properties of null (reading 'style')
+            style속성이 존재하지 않는 다. 이유 - 이 스크립트가 실행될때 my-h1은 생성되지 않았다.
+            그래서 my-h1의 style속성을 가져와라 하면 null(존재하지 않음)
+        */
+    </script>
+    <!-- <script>document.getElementById("my-h1").style.color='red'</script> -->
+</head>
+<body>
+    <h1 id="my-h1">제목1</h1>
+</body>
+<!-- 올바르게 실행 되는 것을 볼수 있다 -->
+<script>document.getElementById("my-h1").style.color='red'</script>
+</html>
