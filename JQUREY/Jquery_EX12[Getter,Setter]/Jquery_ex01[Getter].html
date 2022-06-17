@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+
+        var txt=''
+        function Getter() {
+            txt=$("#my-div").text() // getter
+            alert(txt)
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        값을 가져왓는 가?
+    </div>
+    <button onclick="Getter()">클릭</button>
+</body>
+</html>

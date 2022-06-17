@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var imgList=['img/cat.png','img/dog.jpg']
+        var index=0
+        function myFunc() {
+            index++;
+            if(index >= imgList.length) {
+                index=0
+            }
+            // 예시 setAttribute('src','img/cat.png')
+            $("#my-img").attr('src',imgList[index])
+            
+        }
+    </script>
+</head>
+<body>
+    <img src="img/dog.jpg" alt="dog" id="my-img">
+    <button onclick="myFunc()">변경</button>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        
+        var pwEn=''
+        function text() {
+            if(pwEn==='password') {
+                $("#myInput").attr('type','text')
+                $("#btn").text('보여라')
+                pwEn='text'
+            }else{
+                $("#myInput").attr('type','password')
+                $("#btn").text('숨기기')
+                pwEn='password'
+            }
+
+            // if(pw==='password') {
+            //     $("myInput").attr('type','text')
+            //     pw='text' // <- text로 대입시켜 통과하여 다시 아래 상황이 조건이 이루어진다
+                
+            // }else if(pw==='text') {
+            //     $("myInput").attr('type','password')
+            //     pw='password'
+            // }
+        }
+    </script>
+</head>
+<body>
+    <input id="myInput" type="password" value="아무거나">
+    <button onclick="text()" id="btn">숨기기</button>
+</body>
+</html>

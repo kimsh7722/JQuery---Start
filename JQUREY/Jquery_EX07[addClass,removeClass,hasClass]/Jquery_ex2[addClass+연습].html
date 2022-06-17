@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+
+    <style>
+        .ON {
+            background-color: red;
+        }
+        .OFF {
+            background-color: blue;
+        }
+    </style>
+    <script>
+        var inclass=''
+        // var result=''
+        function myFunc() {
+
+            inclass=$("#my-div").hasClass('OFF') 
+            // hasClass의미를 알아바라 추가냐 머냐 이건
+            
+            if(inclass==true) {
+                $("#my-div").removeClass('OFF')
+                $("#my-div").addClass('ON')
+                $("#btn").text("ON")
+                
+            }else if(inclass==false){
+                $("#my-div").removeClass('ON')
+                $("#my-div").addClass('OFF')
+                $("#btn").text("OFF")
+                
+            }
+
+            // result=$("#btn").hasClass('ON')
+            // if(result==true) {
+            //     $("#btn").removeClass('ON')
+            //     $("#btn").addClass('OFF')
+            //     $("#btn").text("OFF")
+            // }else if(result==false){
+            //     $("#btn").removeClass('OFF')
+            //     $("#btn").addClass('ON')
+            //     $("#btn").text("ON")
+            // }
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div" class="OFF">
+        연습모드
+    </div>
+    <button onclick="myFunc()" id="btn">OFF</button>
+</body>
+</html>

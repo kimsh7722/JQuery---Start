@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-red {
+            background-color: red;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var result=null
+        function myFunc() {
+
+            // Class를 새로 만들어서 적용 
+            $("#my-div").addClass('my-red')
+
+            // 존재하는 해당 Class를 제거
+            // $("#my-div").removeClass('my-red')
+
+            // Class 존재하는지 여부 확인
+            // result=$("#my-div").hasClass('my-red')
+            // alert(result)
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        DIV영역
+    </div>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

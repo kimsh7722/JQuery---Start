@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+
+        var myVal=''
+        var mytxt=''
+        function myFunc() {
+            myVal=$("#my-input").val() // getter 가져와서
+            $("#my-input").val('input값이 가져왓나이다') // setter로 세팅하엿다
+
+            mytxt=$("#my-input").val()
+            $("#my-div").text("영역에 글이 들어왔다")
+
+            mytxt=$("#my-div").html()
+            alert(mytxt)
+            // text는 자만, html은 태그까지 적용
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        DIV 영역입니다
+    </div>
+    <input type="text" value="값이 변경하였는 가?" id="my-input">
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

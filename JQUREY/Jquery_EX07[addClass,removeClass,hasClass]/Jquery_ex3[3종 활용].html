@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        var result=null
+        function myFunc() {
+            result=$("#my-img").hasClass("play")
+            if(result==true) {
+                $("#my-img").removeClass("play")
+                $("#my-img").addClass("pause")
+                $("#my-img").attr('src','./img/play.png')
+            }else {
+                $("#my-img").removeClass("pause")
+                $("#my-img").addClass("play")
+                $("#my-img").attr('src','./img/img.jpg')
+            }
+        }
+        // 이미지 스프라이트 써보기
+        // 버튼 현상 잘대나 확인
+    </script>
+</head>
+<body>
+    <button onclick="myFunc()">
+        <img src="./img/img.jpg" id="my-img" class="play">
+    </button>
+</body>
+</html>

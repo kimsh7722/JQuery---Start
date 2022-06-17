@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <script>
+
+        var txt=''
+        function Setter() {
+            txt=$("#my-div").text('Setter로 변경하였습니다') // setter
+        }
+    </script>
+</head>
+<body>
+    <div id="my-div">
+        값을 변경해보겠습니다
+    </div>
+    <button onclick="Setter()">클릭</button>
+</body>
+</html>
