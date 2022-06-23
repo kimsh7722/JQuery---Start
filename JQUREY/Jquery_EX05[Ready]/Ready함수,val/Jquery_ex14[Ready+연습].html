@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        
+    </style>
+    <script>
+        
+            $(document).ready(function(){
+                var myActive=true
+                $("#btn").click(function(){
+                    // 아이디 my-div요소에 active클래스가 있으면 제거, 없으면 추가
+                    $("#my-div").toggleClass("active")
+                    if(myActive===true) {
+                        $("#my-div").removeClass(".active")
+                        $("#my-div").text("active Class가 제거되었다")
+                        myActive=false
+                    }else {
+                        $("#my-div").addClass(".active")
+                        $("#my-div").text("active Class가 생성되었다")
+                        myActive=true
+                    }
+                })
+            })
+        
+    </script>
+</head>
+<body>
+    <button id="btn">버튼</button>
+    <div id="my-div" class="active">
+        acitve class 영역
+    </div>
+</body>
+</html>

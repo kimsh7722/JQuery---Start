@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        body{
+            width: 5000px;
+            height: 10000px;
+        }
+        #wrap {
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            position: fixed;
+        }
+    </style>
+
+    <script>
+            //  Scroll Event 적용 이건좀 알아야댐
+            $(document).ready(function(){
+                // 방법 1
+                // $(window).on("scroll",function(){
+                //     var sc_top = $(this).scrollTop()
+                //     var sc_left = $(this).scrollLeft()
+                //     $(".top").text(sc_top)
+                //     $(".left").text(sc_left)
+                // })
+
+                // 방법 2
+                $(window).scroll(function(){
+                    var sc_top=$(this).scrollTop()
+                    var sc_left=$(this).scrollLeft()
+                    console.log(sc_top)
+                    $(".top").text(sc_top)
+                    $(".left").text(sc_left)
+                })
+            })
+            
+        
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>Scroll-Top:<span class="top">0</span>px</p>
+        <p>Scroll-Left:<span class="left">0</span>px</p>
+    </div>
+</body>
+</html>

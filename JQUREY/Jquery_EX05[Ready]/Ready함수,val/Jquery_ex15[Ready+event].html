@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        
+    </style>
+    <script>
+        
+            $(document).ready(function(){
+                // 여러개 이벤트 등록할때 사용시
+                $("#btn").on({
+                    click:function(){
+                        // 클릭시 실행 기능
+                        $("#btn").css("color","red")
+                    },
+                    mouseover:function() {
+                        // 마우스 오버시 실행 기능
+                        $("#btn").css("color","green")
+                    },
+                    mouseout:function(){
+                        // 마우스 아웃시 실행할 기능
+                        $("#btn").css("color","blue")
+                    }
+                })
+            })
+            
+        
+    </script>
+</head>
+<body>
+    <button id="btn">버튼</button>
+</body>
+</html>
